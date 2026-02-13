@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -17,7 +17,7 @@
     <div class="container">
       <div class="container-header">
         <div class="left-header">
-          <h1>My To do List</h1>
+          <h1>My To-do List</h1>
           <div class="no-of-items"><p>0 item(s)</p></div>
         </div>
         <div class="switch-mode">
@@ -28,11 +28,31 @@
         </div>
       </div>
       <div class="container-main">
-        <input type="text" placeholder="Your list is empty" />
+        <ul id="tasklist">
+          <li>
+            <!-- <label for="item1">checklist</label
+            ><input type="checkbox" class="li-item" name="item-1" id="item1" />
+          </li> -->
+          </li>
+        </ul>
       </div>
       <div class="container-footer">
-        <input type="text" placeholder="Type your list here..." />
-        <button class="add"><p>add item</p></button>
+        <!-- <textarea
+            class="list-item"
+          id="userNotes"
+          name="notes"
+          rows="4"
+          cols="5"
+          placeholder="Your list is empty"
+        ></textarea> -->
+        <input
+          class="list-item"
+          id="input-box"
+          type="text"
+          placeholder="Type your list here..."
+        />
+        <button class="add" id="add-btn"><p>add item</p></button>
+        <script src="script.js"></script>
       </div>
     </div>
   </body>

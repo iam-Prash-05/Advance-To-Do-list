@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Just Another Hand", sans-serif;
+  font-family: "Patrick Hand", cursive;
   font-weight: 400;
   font-style: normal;
   color: white;
@@ -19,13 +19,20 @@ body {
   justify-content: center;
   background-color: #25282a;
 }
-input {
-  border: none;
-  outline: none;
-  padding: 30px 20px;
-  font-family: sans-serif;
-  font-size: large;
-  background-color: transparent;
+ul {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* justify-content: center; */
+  gap: 10px;
+  list-style: square;
+  list-style-position: inside;
+}
+li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 button {
   height: 40px;
@@ -38,11 +45,25 @@ button {
   align-items: center;
   justify-content: center;
 }
+/* textarea is good too know but not need here */
+/* textarea { 
+  padding: 10px;
+  border: 1px transparent #ccc;
+  border-radius: 8px;
+  font-family: "Arial", sans-serif;
+  color: black;
+  background-color: #1e2122;
+  resize: vertical; 
+}
+textarea:focus {
+  border-color: #33b5e5;
+  outline: none;
+} */
 
 .container {
   /* outline: auto; */
   width: 500px;
-  height: 550px;
+  min-height: 550px;
   background-color: #1e2122;
   display: flex;
   flex-direction: column;
@@ -75,14 +96,25 @@ button {
 .container-main {
   flex: 1;
 }
-.container-main input {
-  width: 100%;
+.container-main li:has(input:checked) {
+  text-decoration: line-through;
+  opacity: 0.6;
 }
 
 .container-footer {
-  padding: 20px 20px 20px 0;
+  padding: 20px;
   border-top: 2px solid #25282a;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 40px;
+}
+.list-item {
+  border: none;
+  outline: none;
+  padding: 30px 20px;
+  /* font-family: sans-serif; */
+  font-size: medium;
+  background-color: transparent;
+  flex: 1;
 }
